@@ -1,0 +1,106 @@
+:root {
+    --Very-Dark-Gray: hsl(0, 0%, 17%);
+    --Dark-Gray: hsl(0, 0%, 59%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.125rem;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.top {
+    height: 250px;
+    background: url(images/pattern-bg.png) var(--Very-Dark-Gray) no-repeat;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#map {
+    height: calc(100vh - 250px);
+}
+
+h1 {
+    color: white;
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.input {
+    width: 600px;
+    display: flex;
+    align-self: center;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+input {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    padding: 0 1rem;
+}
+
+
+button {
+    border: none;
+    border-radius: 0 10px 10px 0;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    z-index: 10;
+    background: var(--Very-Dark-Gray);
+    outline: none;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+button:hover {
+    background: var(--Dark-Gray);
+}
+
+.data {
+    min-width: 800px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    gap: 5%;
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(50%);
+    z-index: 1000000;
+    box-shadow: 0px 0px 5px 0px var(--Dark-Gray);
+}
+
+.data-element {
+    text-align: left;
+}
+
+.data-element:not(:first-of-type) {
+    padding: 0 1rem;
+    border-left: .1px solid gainsboro;
+}
+
+h3 {
+    color: var(--Dark-Gray);
+    font-weight: 500;
+    font-size: .75rem;
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+}
