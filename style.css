@@ -123,8 +123,8 @@ span {
 
 @media (max-width: 600px) {
     .data {
-        height: 350px;
-        width: 80vw;
+        height: 300px;
+        width: 70vw;
         display: grid;
         justify-content: center;
         grid-template-columns: 1fr;
@@ -139,17 +139,21 @@ span {
     }
 
     .data-element:not(:first-of-type) {
-        margin-top: .5rem;
+        margin-top: .25rem;
         border-left: none;
         margin-left: 0;
     }
 
-    .top {
-        height: 350px;
+    h3 {
+        margin-bottom: 0.25rem;
     }
 
     #map {
-        height: calc(100vh - 350px);
+        height: calc(100vh - 300px);
+    }
+
+    .top {
+        height: 300px;
     }
 
     .input {
