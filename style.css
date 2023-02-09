@@ -23,6 +23,7 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
     position: relative;
 }
 
@@ -34,10 +35,11 @@ h1 {
     color: white;
     font-size: 2rem;
     margin: 1rem 0;
+    font-weight: 700;
 }
 
 .input {
-    width: 600px;
+    width: 500px;
     display: flex;
     align-self: center;
     position: relative;
@@ -53,6 +55,15 @@ input {
     padding: 0 1rem;
 }
 
+.message {
+    color: red;
+    position: absolute;
+    bottom: -20px;
+    left: 20px;
+    font-size: .75rem;
+    font-weight: 400;
+    font-style: italic;
+}
 
 button {
     border: none;
@@ -73,13 +84,12 @@ button:hover {
 }
 
 .data {
-    min-width: 800px;
+    max-width: 95%;
     background: white;
-    display: flex;
+    display: grid;
     justify-content: center;
-    align-self: center;
-    gap: 5%;
-    padding: 2rem 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 2rem;
     border-radius: 10px;
     position: absolute;
     bottom: 0;
@@ -95,12 +105,53 @@ button:hover {
 .data-element:not(:first-of-type) {
     padding: 0 1rem;
     border-left: .1px solid gainsboro;
+    margin-left: 1rem;
 }
 
 h3 {
     color: var(--Dark-Gray);
-    font-weight: 500;
+    font-weight: 400;
     font-size: .75rem;
     text-transform: uppercase;
     margin-bottom: .5rem;
 }
+
+span {
+    font-weight: 500;
+    word-break: normal;
+}
+
+@media (max-width: 600px) {
+    .data {
+        height: 350px;
+        width: 80vw;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        padding: 1rem;
+    }
+
+    .data-element {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .data-element:not(:first-of-type) {
+        margin-top: .5rem;
+        border-left: none;
+        margin-left: 0;
+    }
+
+    .top {
+        height: 350px;
+    }
+
+    #map {
+        height: calc(100vh - 350px);
+    }
+
+    .input {
+        width: 80vw;
+    }
